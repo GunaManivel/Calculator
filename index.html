@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Orbitron"
+    />
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <h1 id="title">Calculator</h1>
+          <p id="description">
+            The Calculator is a simple and user-friendly web application
+            designed for performing basic arithmetic calculations. It provides a
+            clean and intuitive interface with buttons for digits, operators,
+            and essential functions like clear and backspace. The calculator
+            supports addition, subtraction, multiplication, and division
+            operations, making it a versatile tool for everyday calculations.
+            The interface is designed to be responsive, allowing users to
+            perform calculations on various devices. With its straightforward
+            design, the Calculator is an efficient tool for quick and accurate
+            mathematical tasks.
+          </p>
+
+            <div class="calculator mt-5">
+              <input
+                type="text"
+                id="result"
+                class="form-control mb-2"
+                readonly
+              />
+              <div class="row">
+                <div class="col">
+                  <button
+                    id="clear"
+                    class="btn btn-danger btn-block btn-clear"
+                    onclick="clearDisplay()"
+                  >
+                    C
+                  </button>
+                </div>
+                <div class="col">
+                  <button
+                    class="btn btn-primary btn-block btn-backspace"
+                    onclick="backspace()"
+                  >
+                    ←
+                  </button>
+                </div>
+                <div class="col">
+                  <button
+                    class="btn btn-primary btn-block btn-decimal"
+                    onclick="appendDecimal()"
+                  >
+                    .
+                  </button>
+                </div>
+                <div class="col">
+                  <button
+                    class="btn btn-primary btn-block btn-operator"
+                    onclick="addOperator('*')"
+                  >
+                    x
+                  </button>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col">
+                  <button
+                    class="btn btn-primary btn-block"
+                    onclick="appendNumber('7')"
+                  >
+                    7
+                  </button>
+                </div>
+                <div class="col">
+                  <button
+                    class="btn btn-primary btn-block"
+                    onclick="appendNumber('8')"
+                  >
+                    8
+                  </button>
+                </div>
+                <div class="col">
+                  <button
+                    class="btn btn-primary btn-block"
+                    onclick="appendNumber('9')"
+                  >
+                    9
+                  </button>
+                </div>
+                <div class="col">
+                  <button
+                    class="btn btn-primary btn-block btn-operator"
+                    onclick="addOperator('/')"
+                  >
+                    /
+                  </button>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col">
+                  <button
+                    class="btn btn-primary btn-block"
+                    onclick="appendNumber('4')"
+                  >
+                    4
+                  </button>
+                </div>
+                <div class="col">
+                  <button
+                    class="btn btn-primary btn-block"
+                    onclick="appendNumber('5')"
+                  >
+                    5
+                  </button>
+                </div>
+                <div class="col">
+                  <button
+                    class="btn btn-primary btn-block"
+                    onclick="appendNumber('6')"
+                  >
+                    6
+                  </button>
+                </div>
+                <div class="col">
+                  <button
+                    id="subtract"
+                    class="btn btn-primary btn-block btn-operator"
+                    onclick="addOperator('-')"
+                  >
+                    -
+                  </button>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col">
+                  <button
+                    id="1"
+                    class="btn btn-primary btn-block"
+                    onclick="appendNumber('1')"
+                  >
+                    1
+                  </button>
+                </div>
+                <div class="col">
+                  <button
+                    id="2"
+                    class="btn btn-primary btn-block"
+                    onclick="appendNumber('2')"
+                  >
+                    2
+                  </button>
+                </div>
+                <div class="col">
+                  <button
+                    id="3"
+                    class="btn btn-primary btn-block"
+                    onclick="appendNumber('3')"
+                  >
+                    3
+                  </button>
+                </div>
+                <div class="col">
+                  <button
+                    id="add"
+                    class="btn btn-primary btn-block btn-operator"
+                    onclick="addOperator('+')"
+                  >
+                    +
+                  </button>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col">
+                  <button
+                    class="btn btn-primary btn-block"
+                    onclick="appendZero()"
+                  >
+                    0
+                  </button>
+                </div>
+                <div class="col">
+                  <button
+                    class="btn btn-primary btn-block"
+                    onclick="appendNumber('00')"
+                  >
+                    00
+                  </button>
+                </div>
+                <div class="col-6">
+                  <button
+                    id="equal"
+                    class="btn btn-success btn-block btn-equal"
+                    onclick="evaluateExpression()"
+                  >
+                    =
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./js/script.js"></script>
+    <script src="https://app.zenclass.in/sheets/v1/js/zen/suite/bundle.js"></script>
+  </body>
+  <!-- ... existing code ... -->
+</html>
